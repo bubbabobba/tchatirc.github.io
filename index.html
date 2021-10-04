@@ -9,27 +9,24 @@
   </head>
   <body>
   
-<div class="twitch">
-  <div class="twitch-video">
-    <iframe
-      src="https://player.twitch.tv/?channel=savepointsofa&parent=https://bubbabobba.github.io/tchatirc.github.io/&autoplay=true"
-      frameborder="0"
-      scrolling="no"
-      allowfullscreen="true"
-      height="100%"
-      width="100%">
-    </iframe>
-  </div>
-  <div class="twitch-chat">
-    <iframe
-      frameborder="0"
-      scrolling="no"
-      src="https://www.twitch.tv/embed/savepointsofa/chat?parent=https://bubbabobba.github.io/tchatirc.github.io/"
-      height="100%"
-      width="100%">
-    </iframe>
-  </div>
-</div>
+    <div id="twitch-embed"></div>
+
+    <!-- Load the Twitch embed JavaScript file -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 854,
+        height: 480,
+        channel: "dansgaming",
+        // Only needed if this page is going to be embedded on other websites
+        parent: ["https://bubbabobba.github.io/tchatirc.github.io/"]
+      });
+    </script>
+
+<iframe src="https://player.twitch.tv/?channel=dansgaming&parent=https://bubbabobba.github.io/tchatirc.github.io/" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+
 
   </body>
 </html>
